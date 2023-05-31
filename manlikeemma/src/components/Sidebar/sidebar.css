@@ -1,0 +1,25 @@
+.page-sidebar-root {
+  margin-top: 30px;
+}
+.page-sidebar-body {
+  display: flex;
+  flex-direction: column;
+  /* width: 50px; */
+}
+.page-sidebar-title {
+  color: white;
+  font-weight: 500 !important;
+  font-family: "Montserrat";
+  font-size: 14px;
+  margin: 5px;
+}
+.active-dot {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #64ffda;
+  margin: 5px;
+}
+.page-sidebar-button :hover {
+  color: #64ffda;
+}
