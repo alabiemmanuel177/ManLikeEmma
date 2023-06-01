@@ -22,6 +22,8 @@ export default function Sidebar() {
                 return "3"
             case "/contact":
                 return "4"
+            case "/about":
+                return "5"
             default:
                 return "1"
         }
@@ -46,6 +48,7 @@ export default function Sidebar() {
         <div className='page-sidebar-root'>
             <div className='page-sidebar-body'>
                 <SidebarButton name={"1"} link={'/'} title={'Home'} />
+                <SidebarButton name={"5"} link={'/about'} title={'About'} />
                 <SidebarButton name={"2"} link={'/projects'} title={'Project'} />
                 <SidebarButton name={"3"} link={'/info'} title={'Experience'} />
                 <SidebarButton name={"4"} link={'/contact'} title={'Contact'} />
