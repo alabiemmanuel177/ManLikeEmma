@@ -2,7 +2,7 @@
   font-family: "Montserrat";
   src: url("../src/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
     format("truetype");
-  color: #ccd6f6;
+    color: var(--navbar_text-color);
 }
 
 body {
@@ -13,5 +13,5 @@ body {
 #root {
   width: 100vw;
   height: 100vh;
-  background-color: #0c0c0c;
+  background-color: var(--background-color);
 }

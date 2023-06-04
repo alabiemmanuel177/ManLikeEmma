@@ -1,0 +1,45 @@
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.company {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  animation: spin 2s linear infinite;
+}
+
+.company-name {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.portfolio {
+  color: #fff;
+  font-weight: lighter;
+  margin-left: 10px;
+}

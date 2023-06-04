@@ -4,10 +4,9 @@
 .page-sidebar-body {
   display: flex;
   flex-direction: column;
-  /* width: 50px; */
 }
 .page-sidebar-title {
-  color: white;
+  color: var(--navbar_text-color);
   font-weight: 500 !important;
   font-family: "Montserrat";
   font-size: 14px;
@@ -23,3 +22,4 @@
 .page-sidebar-button :hover {
   color: #64ffda;
 }
+
