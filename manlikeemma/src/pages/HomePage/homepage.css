@@ -16,7 +16,7 @@
   padding: 10px;
 }
 .home-page-card h1 {
-  color: #64ffda;
+  color: var(--primary-color);
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 45px;
@@ -25,7 +25,6 @@
 }
 .home-page-card h3 {
   margin-top: 20px !important;
-  color: #fff;
   font-family: "Montserrat";
   font-weight: 300;
   font-size: 18px;
@@ -33,9 +32,25 @@
   margin: -0.1em 0 0 -0.04em;
 }
 .nameColour {
-  color: #64ffda;
+  color: var(--primary-color);
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 35px;
   margin: 10px;
+}
+.home-page-card {
+  opacity: 0;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in-animation 0.2s ease-in-out forwards;
 }

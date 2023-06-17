@@ -8,7 +8,7 @@ export const RadioButton = ({ label, value, checked, onChange }) => {
                 defaultValue={value}
                 checked={checked}
                 onChange={onChange}
-                style={{ display: 'none' }}
+                style={{ display: 'none', cursor: 'pointer' }}
             />
             <div
                 style={{
@@ -18,7 +18,8 @@ export const RadioButton = ({ label, value, checked, onChange }) => {
                     borderRadius: '4px',
                     display: 'inline-block',
                     marginRight: '8px',
-                    backgroundColor: checked ? '#ccc' : 'transparent',
+                    backgroundColor: checked ? 'hsl(0, 0%, 67%) ' : 'transparent',
+                    cursor: 'pointer'
                 }}
             ></div>
             {label}

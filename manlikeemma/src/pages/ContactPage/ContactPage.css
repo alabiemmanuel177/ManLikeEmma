@@ -1,0 +1,145 @@
+.contact-page-root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat" !important ;
+}
+.contact-page-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat" !important ;
+}
+.contact-page-body h2 {
+  font-size: 22px;
+  font-weight: 200;
+  text-align: center;
+  font-family: "Montserrat" !important ;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.contact-form input {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 200;
+  color: var(--primary-color);
+  background-color: transparent;
+  font-family: "Montserrat" !important ;
+}
+.contact-form input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+.shoot {
+  width: 250px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.shootText {
+  margin-right: 5px;
+}
+.shoot:hover {
+  /* background-color: hsl(0, 0%, 67%); */
+}
+.underline-input {
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 67%);
+  outline: none;
+  width: 100%;
+  color: transparent;
+  background-color: transparent;
+}
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.labelInput {
+  width: 300px;
+}
+.user {
+  margin-right: 50px;
+}
+.textArea {
+  width: 650px;
+  margin-top: 60px;
+}
+.textarea {
+  color: var(--primary-color);
+  height: 50px;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 200;
+  font-family: "Montserrat" !important ;
+}
+.shoot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 67%);
+  transition: left 0.3s ease-in-out;
+  color: var(--primary-color);
+  z-index: -1;
+}
+
+.shoot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: var(--primary-color);
+}
+
+.shoot:hover::before {
+  left: 0;
+  color: var(--primary-color);
+}
+
+.contact-page-root {
+  opacity: 0;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in-animation 0.2s ease-in-out forwards;
+}

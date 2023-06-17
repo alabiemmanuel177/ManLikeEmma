@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { PageLayout } from "./pages/PageLayout/PageLayout";
 import { ProjectPage } from "./pages/ProjectsPage/ProjectPage";
-import { InfoPage } from "./pages/InfoPage/InfoPage";
+import { ExperiencePage } from "./pages/ExperiencePage/ExperiencePage";
 import { ContactPage } from "./pages/ContactPage/ContactPage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { Preloader } from "./components/PreLoader/Preloader";
-import "./App.css"; // Import your CSS file for App component
+import "./App.css";
 
 export const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -17,13 +17,12 @@ export const App = () => {
   };
 
   const [loading, setLoading] = useState(true);
-  const [fadeIn, setFadeIn] = useState(false); // New state for fade-in effect
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    // Simulate an asynchronous action
     setTimeout(() => {
-      setLoading(false); // Set loading state to false after the action is completed
-      setFadeIn(true); // Trigger fade-in effect after loading
+      setLoading(false);
+      setFadeIn(true);
     }, 3000);
   }, []);
 
@@ -32,13 +31,17 @@ export const App = () => {
     if (theme === "light") {
       root.style.setProperty("--background-color", "#fff");
       root.style.setProperty("--primary-color", "black");
-      root.style.setProperty("--secondary-color", "black");
+      root.style.setProperty("--secondary-color", "#000");
       root.style.setProperty("--navbar_text-color", "#000");
-    } else {
+      root.style.setProperty("--projectcard-color", "#f3f3f3");
+      root.style.setProperty("--projectcard-color-border", "#000");
+    } else if (theme === "dark") {
       root.style.setProperty("--background-color", "#0c0c0c");
       root.style.setProperty("--primary-color", "#fff");
-      root.style.setProperty("--secondary-color", "hsl(0, 0%, 95%)");
+      root.style.setProperty("--secondary-color", "#fff");
       root.style.setProperty("--navbar_text-color", "#fff");
+      root.style.setProperty("--projectcard-color", "#202022");
+      root.style.setProperty("--projectcard-color-border", "#fff");
     }
   }, [theme]);
 
@@ -60,7 +63,7 @@ export const App = () => {
               <Route index element={<HomePage />} path="/" />
               <Route element={<AboutPage />} path="/about" />
               <Route element={<ProjectPage />} path="/projects" />
-              <Route element={<InfoPage />} path="/info" />
+              <Route element={<ExperiencePage />} path="/experience" />
               <Route element={<ContactPage />} path="/contact" />
             </Route>
           </Routes>

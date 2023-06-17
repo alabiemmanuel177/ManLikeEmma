@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .page-sidebar-title {
-  color: var(--navbar_text-color);
+  color: var(--primary-color);
   font-weight: 500 !important;
   font-family: "Montserrat";
   font-size: 14px;
@@ -16,10 +16,25 @@
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #64ffda;
+  background-color: var(--primary-color);
   margin: 5px;
 }
 .page-sidebar-button :hover {
-  color: #64ffda;
+  color: hsl(0, 0%, 67%);
+}
+.page-sidebar-button {
+  color: var(--primary-color);
+}
+.button-appear {
+  opacity: 1;
+  animation: fade-in 1s ease-in-out;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

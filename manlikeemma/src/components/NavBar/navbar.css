@@ -1,62 +1,3 @@
-/* .page-root {
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 2%;
-  border: 0.2px solid hsl(0, 0%, 95%);
-  display: flex;
-}
-.page-header {
-  margin: 2%;
-  width: 43%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.page-header h1 {
-  font-family: "Montserrat";
-  font-weight: 200;
-  font-size: 50px;
-  font-feature-settings: "palt";
-  margin: -0.1em 0 0 -0.04em;
-}
-.page-header h2 {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 12px;
-  font-feature-settings: "palt";
-  margin: -0.1em 0 0 -0.04em;
-}
-.page-body {
-  width: 57%;
-  margin: 0;
-}
-.page-output {
-  width: 100%;
-  height: 100%;
-}
-.links {
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  justify-content: space-evenly;
-}
-.link_icon {
-  font-size: 25px;
-}
-.thememode {
-  margin-top: 10px;
-  display: flex;
-} */
-
-/* :root {
-  --primary-color: white;
-  --secondary-color: hsl(0, 0%, 95%);
-} */
-
 .page-root {
   color: var(--primary-color);
   position: absolute;
@@ -65,13 +6,14 @@
   right: 0;
   bottom: 0;
   margin: 2%;
-  border: 0.2px solid var(--secondary-color);
+  border: 0.1px solid var(--secondary-color);
   display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .page-header {
   margin: 2%;
-  width: 43%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,7 +36,7 @@
 }
 
 .page-body {
-  width: 57%;
+  width: 65%;
   margin: 0;
 }
 
@@ -111,7 +53,7 @@
 }
 
 .link_icon {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .thememode {
@@ -126,9 +68,38 @@
 
 .link_icon:hover,
 .link_icon:focus {
-  color: #64ffda;
+  color: hsl(0, 0%, 67%);
   text-decoration: none;
 }
 .link_wrapper:hover {
   background-color: transparent;
+}
+
+.link_wrapper {
+  opacity: 0;
+}
+
+.icon-appear {
+  opacity: 1;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
