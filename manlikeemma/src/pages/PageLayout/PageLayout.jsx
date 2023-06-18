@@ -4,7 +4,6 @@ import { NavBar } from '../../components/NavBar/NavBar'
 // import Background from '../../Animation/World'
 
 export const PageLayout = ({ theme, handleThemeChange }) => {
-
     return (
         <>
 {/*             <Background /> */}

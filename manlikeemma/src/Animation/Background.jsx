@@ -1,14 +1,29 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
-export default function Background() {
+export default function Background({ theme }) {
+  console.log(theme);
   const containerRef = useRef(null);
   const rendererRef = useRef(null);
+  const [backgroundColor, setBackgroundColor] = useState(''); // Default black background
+  const [particleColor, setParticleColor] = useState(''); // Default black background
+
+  // Set the background color and particle color based on theme
+  useEffect(() => {
+    if (theme === 'dark') {
+      setBackgroundColor('#ff0000');
+      setParticleColor('#ffffff');
+    } else if (theme === 'light') {
+      setBackgroundColor('#ffffff');
+      setParticleColor('#ff0000');
+    }
+  }, [theme]);
 
   useEffect(() => {
     let camera, scene, renderer;
     let particles, count = 0;
-    let mouseX = 0, mouseY = 0;
+    let mouseX = 0,
+      mouseY = 0;
     let windowHalfX = window.innerWidth / 2;
     let windowHalfY = window.innerHeight / 2;
 
@@ -33,7 +48,8 @@ export default function Background() {
       const positions = new Float32Array(numParticles * 3);
       const scales = new Float32Array(numParticles);
 
-      let i = 0, j = 0;
+      let i = 0,
+        j = 0;
 
       for (let ix = 0; ix < AMOUNTX; ix++) {
         for (let iy = 0; iy < AMOUNTY; iy++) {
@@ -54,7 +70,7 @@ export default function Background() {
 
       const material = new THREE.ShaderMaterial({
         uniforms: {
-          color: { value: new THREE.Color(0xffffff) },
+          color: { value: new THREE.Color(particleColor) }, // Use the particleColor state
         },
         vertexShader: document.getElementById('vertexshader').textContent,
         fragmentShader: document.getElementById('fragmentshader').textContent,
@@ -107,7 +123,8 @@ export default function Background() {
       const positions = particles.geometry.attributes.position.array;
       const scales = particles.geometry.attributes.scale.array;
 
-      let i = 0, j = 0;
+      let i = 0,
+        j = 0;
 
       for (let ix = 0; ix < AMOUNTX; ix++) {
         for (let iy = 0; iy < AMOUNTY; iy++) {
@@ -122,6 +139,7 @@ export default function Background() {
 
       particles.geometry.attributes.position.needsUpdate = true;
       particles.geometry.attributes.scale.needsUpdate = true;
+      scene.background = new THREE.Color(backgroundColor); // Set the background color dynamically
 
       renderer.render(scene, camera);
 
@@ -134,7 +152,7 @@ export default function Background() {
         rendererRef.current.dispose();
       }
     };
-  }, []);
+  }, [particleColor, backgroundColor, theme]); // Update the effect dependencies
 
   return <div ref={containerRef} />;
 }

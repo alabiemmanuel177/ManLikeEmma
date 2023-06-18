@@ -116,7 +116,7 @@ export const ExperiencePage = () => {
             <div className="work-experience">
               <div className="work-experience-title">
                 <h2>Full-stack Engineer intern <span>@ ATB TechSoft</span></h2>
-                <h4>Februrary - September 2022</h4>
+                <h4>Februrary - August 2022</h4>
               </div>
               <div className="work-experience-body">
                 <h3>As a Full-stack Engineer Intern at ATB Tech Limited, I had the opportunity to work extensively with React JS and Node Express, honing my skills in both front-end and back-end development. Throughout my internship, I also focused on strengthening my knowledge of data structures and algorithms, essential foundations for building robust software solutions.</h3>
@@ -142,7 +142,7 @@ export const ExperiencePage = () => {
             <div className="work-experience">
               <div className="work-experience-title">
                 <h2>IT Manager <span>@ Royal Gate Commercial and Marketing Limited</span></h2>
-                <h4>2014-2022</h4>
+                <h4>May 2016 - February 2022</h4>
               </div>
               <div className="work-experience-body">
                 <h3>As an IT Manager, I was responsible for the efficient operation of computer systems, Wi-Fi networks, and CCTV systems. I ensured their seamless functionality by promptly addressing any issues that arose. I conducted troubleshooting and diagnostics to identify and resolve technical problems, minimizing downtime and optimizing productivity.</h3>
