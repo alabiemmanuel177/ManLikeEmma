@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #252525;
+  --background-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #fff;
+    --background-color: #252525;
+  }
+}
+
+body {
+  color: var(--primary-color);
+  background: var(--background-color);
+  line-height: 1.625;
+}
+
+.thin-white-border {
+  border: 0.1px solid var(--primary-color);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
